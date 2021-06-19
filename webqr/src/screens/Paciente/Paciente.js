@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import * as S from '../../components/User/styles';
 import fila from '../../assets/fila.png';
+import cores from '../../assets/cores.png';
 import  User  from '../../components/User';
 import api from '../../services/api';
 import profile from '../../assets/profile-picture.png';
 import * as I from '../../components/Text/styles';
 import Input from '../../components/Text';
+import './App.css';
 
 function Paciente() {
   
@@ -17,33 +19,41 @@ function Paciente() {
     const [pa, setPa] = useState('');
     const [type, setType] = useState('');
     const [temperature, setTemperature] = useState('');
+    const [description, setDescription] = useState('');
+    const [filatype, setFilatype] = useState('');
 
  async function loadData(){
    
-
-        api.get('/users/deivid.rosariodrr@gmail.com')
-
+        api.get('/users/tes@tes')
 
             .then(response => {
                 setUser(response.data)
+               
             })
     
      .catch (err => {
         console.log(err)
     }
 	)
-
    }
 
-async function postData(){
+async function putData(){
    
     try {
-        const response = await api.put('/users/60b90dda046554001f5baf2f',
+        const response = await api.post('api/paciente', 
             {
+                "id": user.id,
+                "name": user.name,
+                "password": "pass",
+                "tel": user.tel,
+                "email": user.email,
                 "temperature": temperature,
                 "ox": ox,
+                "description": description,
+                "type": "tipo",
+                "filatype": filatype,
                 "pa": pa,
-                "type": type
+
             })
 
     } catch (err) {
@@ -67,18 +77,36 @@ return (
     </S.Content>   
     
     <I.Container>
-         <I.Input placeholder="Descrição" placeholderTextColor="green" />
+         <I.Input input name="description" placeholder="Descrição" onChange={e=>setDescription(e.target.value)} />
          <I.CardContainer>
-            <I.Card placeholder="Temperature" placeholderTextColor="green" />
-            <I.Card placeholder="OX" placeholderTextColor="green" />
-            <I.Card placeholder="Type" placeholderTextColor="green" />
+            <I.Card input name="temperature" placeholder="Temperatura" onChange={e=>setTemperature(e.target.value)} />
+            <I.Card input name="ox" placeholder="OX" onChange={e=>setOx(e.target.value)} />
+            <I.Card input name="pa" placeholder="PA" onChange={e=>setPa(e.target.value)} />      
+
+            <I.Option>
+              <p>selecione a área de atendimento:</p>
+              <div class="select-estiloso">
+               <select value={filatype} onChange={e=>setFilatype(e.target.value)}>
+               <option value="null">-</option>
+                <option value="ortopedia">ortopedia</option>
+                <option value="pediatra">pediatra</option>
+                <option value="clinico">clinico</option>
+                <option value="grave">grave</option>
+              </select>
+             </div>
+            </I.Option>
+            <I.Option> 
+               <button onClick={putData} >
+                    Adicionar dados 
+                </button>
+                 
+            </I.Option>
          </I.CardContainer>
      </I.Container>
 
-     
-     <input type = "checkbox" id = "subscribeNews" nome = "subscribe" value = "newsletter"></input>
-
     
+      <I.end><img src={cores} width="450" height="100"/></I.end>
+      
   </div>
     
 

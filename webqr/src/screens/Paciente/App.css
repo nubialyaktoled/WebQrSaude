@@ -19,6 +19,10 @@
   top: 0;
 }
 
+.App-end {
+  background-color: green;
+}
+
 
 .App-link {
   color: #61dafb;
@@ -45,8 +49,30 @@
   border: solid;
 }
 
+
 .App-link {
   color: #61dafb;
 }
 
+.select-estiloso { /* <div> */
+  width: 200px;
+  height: 34px;
+  overflow: hidden;
+  background:white;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+}   
+
+.select-estiloso select { /* <select> */
+  background: transparent; /* importante para exibir o novo ícone */
+  width: 268px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 2;
+  height: 34px;
+}      
 

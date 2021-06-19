@@ -12,8 +12,8 @@ export const Container = styled.p`
   transition: all 0.3s ease; 
   `
 
-export const Card = styled.div`
-width: 350px;
+export const FilaPediatra = styled.div`
+  width: 1200px;
   height: 40px;
   border-width: 2px;
   border-style: solid;
@@ -24,7 +24,7 @@ width: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  background-color: #b7d5ac;
 
   margin: 20px;
   cursor: pointer;
@@ -56,15 +56,14 @@ display: grid;
 
 
 `
-export const CardContent = styled.div `
-grid-area: card;
+export const Content = styled.div `
   width: 100%;
   justify-content: right;
   margin: 0px;
-  background-color: #dbead5;
+  background-color: white;
 
   display: grid;
-  grid-template-columns: 400px 400px ;
+  grid-template-columns: 400px 2fr ;
   grid-column: 3 / 4;
   grid-row: 4;
 
@@ -72,34 +71,4 @@ grid-area: card;
     text-decoration: none;  
     color: #000;
   }
-  
 `
-
-export const pic = styled.div`
-grid-area: pic;
-
-  font-size: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  margin: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-  
-
-`
-
-export const Content = styled.div `
-background-color: #dbead5;
-width: 100%;
-justify-content: right;
-margin-bottom: 0px; 
-margin: 0px;
-border-top-width: 0px;
-
-display: flex;
-
-
-  `
