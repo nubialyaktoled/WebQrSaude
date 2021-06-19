@@ -1,0 +1,27 @@
+.FiladePacientes {
+  text-align: left;
+}
+
+.App-header {
+  background-color: white;
+  min-height: 70vh;
+  display: flex;
+  text-align: left;
+  align-items: left;
+  justify-content: left;
+  font-size: calc(7px + 2vmin);
+  color: black;
+}
+
+.head {
+  text-align: left;
+  background-color: white;
+  color: black;
+  border: solid;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
