@@ -56,11 +56,9 @@ function Login() {
 
                    <br/>
 
-          <Link to="/Primeiro Contato"> Não é cadastrado? Cadastre-se!</Link>
-        
-      </header>
+          <Link to="/PrimeiroContato"> Não é cadastrado? Cadastre-se!</Link>
 
-      
+      </header>
     </div>
 
 
