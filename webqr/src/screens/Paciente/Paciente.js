@@ -24,7 +24,7 @@ function Paciente() {
 
  async function loadData(){
    
-        api.get('/users/tes@tes')
+        api.get('/users/luizamaria@gmail.com')
 
             .then(response => {
                 setUser(response.data)
@@ -44,13 +44,14 @@ async function putData(){
             {
                 "id": user.id,
                 "name": user.name,
+                "dateNasc": user.dateNasc,
                 "password": "pass",
                 "tel": user.tel,
                 "email": user.email,
                 "temperature": temperature,
                 "ox": ox,
                 "description": description,
-                "type": "tipo",
+                "type": "bttreipo",
                 "filatype": filatype,
                 "pa": pa,
 
@@ -65,7 +66,7 @@ async function putData(){
    useEffect(() => {
     loadData();
 
-     }, [loadData])
+     }, [])
 
 return (
  
@@ -73,7 +74,7 @@ return (
 <div className="Paciente">
               
     <S.Content>    
-            <User name = {user.name} email={user.email} password='nub' createdAt={user.createdAt}/>
+            <User name = {user.name} dateNasc={user.dateNasc} cpf={user.cpf} cns={user.cns}/>
     </S.Content>   
     
     <I.Container>
