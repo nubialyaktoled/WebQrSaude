@@ -19,37 +19,31 @@ import PrimeiroContato from '../PrimeiroContato';
 import Home from '../Home';
 
 
-function Login() {
+function TelaPrincipal() {
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
   const [user, setUser] = useState('');
 
    
   return (
-    <div className="Login">
+    <div className="TelaPrincipal">
       <header className="App-header">
             
 
-      <br/> <br/><br/> 
-      <I.CardLogin>
-        <p><strong><center>Faça seu login!</center></strong></p>
-        <br/> <br/>
-        
+      
+      <S.Container>
         <center>
-        <I.Card input name="contrato" placeholder="Número de contrato" onChange={e=>setEmail(e.target.value)} />
-        <br/> <br/>
-        <I.Card input name="password" placeholder="Senha" onChange={e=>setPass(e.target.value)} />
-        </center>
-        <br/> 
-
-        <center>
-        <Link to="/TelaPrincipal"> Login!</Link>
-           
-        <br/>
+        <S.Card><Link to="/Paciente"> Ler QR CODE</Link></S.Card>
+        <br></br>
+        <S.Card><Link to="/FilaClinico"> Fila de pacientes Clínico</Link></S.Card>
+         
+         <S.Card><Link to="/FilaPediatra"> Fila de pacientes Pediatra</Link></S.Card>
+         
+         <S.Card><Link to="/FilaEmergencia"> Fila de pacientes Emergência</Link></S.Card>
+         
+         <S.Card><Link to="/FilaOrtopedista"> Fila de pacientes Ortopedista</Link></S.Card>
        </center>
-       </I.CardLogin>
-
-          <Link to="/PrimeiroContato"> Não é cadastrado? Cadastre-se!</Link>
+       </S.Container>
 
       </header>
     </div>
@@ -63,4 +57,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default TelaPrincipal;

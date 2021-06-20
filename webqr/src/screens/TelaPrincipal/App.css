@@ -1,0 +1,78 @@
+.Paciente {
+  text-align: center;
+  background-color: white;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: white;
+  top: 0;
+}
+
+.App-end {
+  background-color: green;
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.FiladePacientes {
+  text-align: left;
+}
+
+
+
+.head {
+  text-align: left;
+  background-color:white;
+  color: black;
+  border: solid;
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+.select-estiloso { /* <div> */
+  width: 200px;
+  height: 34px;
+  overflow: hidden;
+  background:white;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10px;
+}   
+
+.select-estiloso select { /* <select> */
+  background: transparent; /* importante para exibir o novo ícone */
+  width: 268px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 2;
+  height: 34px;
+}      
+
