@@ -23,7 +23,7 @@ return (
 
     <div>
         <br/>
-           <center><h1><strong> Fila pediatra</strong></h1></center>
+           <center><h1><strong> Fila Clinico</strong></h1></center>
         <br/>
 
             { usuarios.map((user) => (

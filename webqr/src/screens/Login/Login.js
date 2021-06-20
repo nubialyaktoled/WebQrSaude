@@ -41,20 +41,26 @@ function Login() {
     <div className="PrimeiroContato">
       <header className="App-header">
             
-        <p><strong>Faça seu login!</strong></p>
+
+      <br/> <br/><br/> 
+      <I.CardLogin>
+        <p><strong><center>Faça seu login!</center></strong></p>
         <br/> <br/>
         
-
+        <center>
         <I.Card input name="contrato" placeholder="Número de contrato" onChange={e=>setEmail(e.target.value)} />
         <br/> <br/>
         <I.Card input name="password" placeholder="Senha" onChange={e=>setEmail(e.target.value)} />
-        
+        </center>
         <br/> 
 
+        <center>
         <button onClick={putData} >
                    Login</button>
-
+                  
                    <br/>
+       </center>
+       </I.CardLogin>
 
           <Link to="/PrimeiroContato"> Não é cadastrado? Cadastre-se!</Link>
 

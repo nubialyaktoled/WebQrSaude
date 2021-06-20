@@ -71,6 +71,19 @@ export const Card = styled.input`
  
 `
 
+export const CardLogin = styled.div`
+  width: 500px;
+  height: 400px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 20px;
+  background-color: #cbf7c7;
+  margin: 0px;
+
+ 
+`
+
 export const CardContainer = styled.p`
 grid area: cardContainer;
 width: 100%;

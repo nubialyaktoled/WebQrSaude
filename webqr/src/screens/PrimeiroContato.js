@@ -35,7 +35,11 @@ function PrimeiroContato() {
     <div className="PrimeiroContato">
       <header className="App-header">
             
-        <p>Envie seu email e entraremos em contato com você para seu cadastro!</p>
+            <br/><br/><br/>
+            <I.CardLogin>
+            <br/>
+              <center>
+        <p><strong>Envie seu email e entraremos em contato com você para seu cadastro!</strong></p>
         <br/> <br/> <br/>
         
 
@@ -45,7 +49,8 @@ function PrimeiroContato() {
         <button onClick={putData} >
                     Adicionar dados 
                 </button>
-        
+                </center>
+                </I.CardLogin>
       </header>
 
       
