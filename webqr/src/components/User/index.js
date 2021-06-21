@@ -9,12 +9,12 @@ function User({name, dateNasc, cpf, cns }) {
     
       
      <S.Content>
-      <S.pic><img src={profile} width="100" height="100" /></S.pic> 
+      <center><img src={profile} width="150" height="150" /></center>
       <S.CardContent>
-        <S.Card><strong>{name}</strong></S.Card> 
-        <S.Card><strong>{dateNasc}</strong></S.Card> 
-        <S.Card><strong>{cpf}</strong></S.Card> 
-        <S.Card><strong>{cns}</strong></S.Card> 
+        <S.Card><strong>Nome: {name}</strong></S.Card> 
+        <S.Card><strong>Data de nascimento: {dateNasc}</strong></S.Card> 
+        <S.Card><strong>CPF: {cpf}</strong></S.Card> 
+        <S.Card><strong>CNS: {cns}</strong></S.Card> 
       </S.CardContent>
     </S.Content> 
     

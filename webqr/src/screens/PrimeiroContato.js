@@ -25,6 +25,7 @@ function PrimeiroContato() {
             "tel": "e",
             "contrato": "e"
         })
+        {window.location.reload()}
 
   }
 

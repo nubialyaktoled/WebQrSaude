@@ -6,7 +6,7 @@ export const Container = styled.p`
   height: 500px;
   box-shadow: -3px 1px 13px -2px rgba(0,0,0,0.73);
   border-radius: 20px;
-  background-color: #cbf7c7;
+  background-color: #grey;
   
   cursor: pointer;
   transition: all 0.3s ease; 

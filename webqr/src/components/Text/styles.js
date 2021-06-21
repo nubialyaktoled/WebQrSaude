@@ -57,14 +57,13 @@ export const Card = styled.input`
   border-style: solid;
   border-color: black;
   border-radius: 40px;
-
   font-size: 10;
   display: flex;
   align-items: center;
   justify-content: center;
   
 
-  margin: 0px;
+  margin: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
 

@@ -24,7 +24,7 @@ function Paciente() {
 
  async function loadData(){
    
-        api.get('/users/luizamaria@gmail.com')
+        api.get('/users/deivid.rosariodrr@gmail.com')
 
             .then(response => {
                 setUser(response.data)
@@ -51,14 +51,16 @@ async function putData(){
                 "temperature": temperature,
                 "ox": ox,
                 "description": description,
-                "type": "bttreipo",
-                "filatype": filatype,
+                "type": "tipo 1",
+                "filatype": "filatypeee",
                 "pa": pa,
 
             })
+            {window.location.reload()}
 
     } catch (err) {
         console.log(err)
+        {window.location.reload()}
     }
 }
 
@@ -72,7 +74,7 @@ return (
  
 
 <div className="Paciente">
-              
+     
     <S.Content>    
             <User name = {user.name} dateNasc={user.dateNasc} cpf={user.cpf} cns={user.cns}/>
     </S.Content>   
@@ -81,8 +83,8 @@ return (
          <I.Input input name="description" placeholder="Descrição" onChange={e=>setDescription(e.target.value)} />
          <I.CardContainer>
             <I.Card input name="temperature" placeholder="Temperatura" onChange={e=>setTemperature(e.target.value)} />
-            <I.Card input name="ox" placeholder="OX" onChange={e=>setOx(e.target.value)} />
-            <I.Card input name="pa" placeholder="PA" onChange={e=>setPa(e.target.value)} />      
+            <I.Card input name="ox" placeholder="xigenação" onChange={e=>setOx(e.target.value)} />
+            <I.Card input name="pa" placeholder="Pressão" onChange={e=>setPa(e.target.value)} />      
 
             <I.Option>
               <p>selecione a área de atendimento:</p>
@@ -97,10 +99,10 @@ return (
              </div>
             </I.Option>
             <I.Option> 
-               <button onClick={putData} >
+               <button onClick={putData}>
                     Adicionar dados 
                 </button>
-                 
+                
             </I.Option>
          </I.CardContainer>
      </I.Container>
